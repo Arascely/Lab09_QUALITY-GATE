@@ -34,12 +34,10 @@ describe('Módulo de Búsqueda y Filtros - Mercado Libre', () => {
     });
 
     test('TC-005: Procesamiento de Filtros Simultáneos', () => {
-    const filtros = { envioGratis: true, condicion: "Nuevo" };
-    const filtrados = procesarFiltrosSimultaneos(filtros, catalogoMock);
-    
-    // Jest: Error por cambiar el resultado
-    expect(filtrados.length).toBe(2); 
-    expect(filtrados[0].id).toBe(1);
-
+        const filtros = { envioGratis: true, condicion: "Nuevo" };
+        const filtrados = procesarFiltrosSimultaneos(filtros, catalogoMock);
+        //Se corrije al anterior codigo
+        expect(filtrados.length).toBe(1);
+        expect(filtrados[0].id).toBe(1);
     });
 });
