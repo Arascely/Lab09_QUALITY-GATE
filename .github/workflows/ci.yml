@@ -1,4 +1,4 @@
- name: CI — Tests Unitarios Jest
+name: CI — Tests Unitarios Jest
 on:
  push:
  branches: [ main ]
