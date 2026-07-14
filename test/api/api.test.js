@@ -1,6 +1,9 @@
 // Archivo: tests/api.test.js
 const request = require('supertest');
-const API_URL = 'https://fakestoreapi.com';
+const API_URL = 'https://fakestoreapi.com/';
+
+const HEADERS = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' };
+
 const response = await request(API_URL)
     .get('/products')
     .set('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
