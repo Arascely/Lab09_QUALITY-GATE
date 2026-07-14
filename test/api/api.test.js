@@ -4,16 +4,12 @@ const API_URL = 'https://fakestoreapi.com/';
 
 const HEADERS = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' };
 
-const response = await request(API_URL)
-    .get('/products')
-    .set('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
-
 describe('Pruebas de API REST - Sistema E-commerce (Supertest)', () => {
 
     describe('Módulo: Búsqueda y filtros', () => {
         
         test('TC-001: Búsqueda exitosa con término genérico', async () => {
-            const response = await request(API_URL).get('/products');
+            const response = await request(API_URL).get('/products').set(HEADERS);
             expect(response.statusCode).toBe(200);
             expect(response.body.length).toBeGreaterThan(0);
             
@@ -26,24 +22,24 @@ describe('Pruebas de API REST - Sistema E-commerce (Supertest)', () => {
         });
 
         test('TC-002: Búsqueda sin coincidencias', async () => {
-            const response = await request(API_URL).get('/products/category/nonexistent');
+            const response = await request(API_URL).get('/products/category/nonexistent').set(HEADERS);
             expect(response.statusCode).toBe(200);
             expect(response.body.length).toBe(0); 
         });
 
         test('TC-003: Validación cruzada de Filtros de Precio', async () => {
-            const response = await request(API_URL).get('/products?sort=desc');
+            const response = await request(API_URL).get('/products?sort=desc').set(HEADERS);
             expect(response.statusCode).toBe(200);
             expect(response.body[0]).toHaveProperty('price');
         });
 
         test('TC-004: Inyección de caracteres especiales', async () => {
-            const response = await request(API_URL).get('/products/category/%20@!#$');
+            const response = await request(API_URL).get('/products/category/%20@!#$').set(HEADERS);
             expect(response.statusCode).toBe(200); 
         });
 
         test('TC-005: Procesamiento de Filtros Simultáneos', async () => {
-            const response = await request(API_URL).get('/products?limit=5&sort=desc');
+            const response = await request(API_URL).get('/products?limit=5&sort=desc').set(HEADERS);
             expect(response.statusCode).toBe(200);
             expect(response.body.length).toBe(5);
         });
@@ -57,7 +53,7 @@ describe('Pruebas de API REST - Sistema E-commerce (Supertest)', () => {
                 date: "2026-06-22",
                 products: [{ productId: 1, quantity: 2 }]
             };
-            const response = await request(API_URL).post('/carts').send(nuevoCarrito);
+            const response = await request(API_URL).post('/carts').send(nuevoCarrito).set(HEADERS);
             expect(response.statusCode).toBe(201);
             expect(response.body).toHaveProperty('id');
             
@@ -72,25 +68,25 @@ describe('Pruebas de API REST - Sistema E-commerce (Supertest)', () => {
                 date: "2026-06-22",
                 products: [{ productId: 2, quantity: 99999 }] // Simulación de límite
             };
-            const response = await request(API_URL).post('/carts').send(carritoExcedido);
+            const response = await request(API_URL).post('/carts').send(carritoExcedido).set(HEADERS);
             expect(response.statusCode).toBe(201);
         });
 
         test('TC-008: Cálculo aritmético del subtotal', async () => {
-            const response = await request(API_URL).get('/carts/5');
+            const response = await request(API_URL).get('/carts/5').set(HEADERS);
             expect(response.statusCode).toBe(200);
             expect(Array.isArray(response.body.products)).toBe(true);
         });
 
         test('TC-009: Eliminación de producto y carrito vacío', async () => {
-            const response = await request(API_URL).delete('/carts/6');
+            const response = await request(API_URL).delete('/carts/6').set(HEADERS);
             expect(response.statusCode).toBe(200);
         });
 
         test('TC-010: Persistencia tras recargar la página', async () => {
-            const response = await request(API_URL).get('/carts/user/2');
+            const response = await request(API_URL).get('/carts/user/2').set(HEADERS);
             expect(response.statusCode).toBe(200);
             expect(response.body.length).toBeGreaterThanOrEqual(0);
         });
     });
-}); 
+});
