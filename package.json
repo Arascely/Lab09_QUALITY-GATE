@@ -1,19 +1,11 @@
 {
-  "name": "lab08",
+  "name": "lab09",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "jest": "^30.4.2"
+  "directories": {
+    "doc": "docs",
+    "test": "test"
   },
   "dependencies": {
     "ansi-escapes": "^4.3.2",
@@ -152,6 +144,8 @@
     "picomatch": "^4.0.5",
     "pirates": "^4.0.7",
     "pkg-dir": "^4.2.0",
+    "playwright": "^1.61.1",
+    "playwright-core": "^1.61.1",
     "pretty-format": "^30.4.1",
     "pure-rand": "^7.0.1",
     "react-is-18": "^18.3.1",
@@ -198,12 +192,23 @@
     "yargs-parser": "^21.1.1",
     "yocto-queue": "^0.1.0"
   },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "jest": "^30.4.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "playwright test --config=playwright.config.ts --project=chromium"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arascely/Lab08_PIPELINE_GITHUB_ACTIONS.git"
+    "url": "github.com:Arascely/Lab09_QUALITY-GATE.git"
   },
-  "bugs": {
-    "url": "https://github.com/Arascely/Lab08_PIPELINE_GITHUB_ACTIONS/issues"
-  },
-  "homepage": "https://github.com/Arascely/Lab08_PIPELINE_GITHUB_ACTIONS#readme"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
 }

@@ -1,4 +1,4 @@
-const { agregarProducto } = require('../src/carrito');
+const { agregarProducto } = require('../../src/carrito');
 
 describe('Módulo de Carrito de Compras - Mercado Libre', () => {
 

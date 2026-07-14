@@ -3,7 +3,7 @@ const {
     validarFiltroPrecio, 
     sanitizarBusqueda, 
     procesarFiltrosSimultaneos 
-} = require('../src/buscador');
+} = require('../../src/buscador');
 
 const catalogoMock = [
     { id: 1, nombre: "Laptop Asus Zenbook", precio: 3500, envioGratis: true, condicion: "Nuevo" },
