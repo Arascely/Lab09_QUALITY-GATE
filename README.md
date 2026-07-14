@@ -77,7 +77,9 @@
 
 ## 6. Evidencias
 
-Evidencia de todos los test pasados:<img width="394" height="202" alt="Captura de pantalla 2026-07-13 220338" src="https://github.com/user-attachments/assets/7ef2ab61-281a-4ed1-b9c6-fe62c69b1738" />
+Evidencia de todos los test pasados:
+
+
 <img width="394" height="202" alt="Captura de pantalla 2026-07-13 220338" src="https://github.com/user-attachments/assets/fda2d90c-3342-4b95-9e70-f7706e34d23a" />
 
 
