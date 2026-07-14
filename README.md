@@ -77,16 +77,23 @@
 
 ## 6. Evidencias
 
-Evidencia de todos los test pasados
+Evidencia de todos los test pasados:<img width="394" height="202" alt="Captura de pantalla 2026-07-13 220338" src="https://github.com/user-attachments/assets/7ef2ab61-281a-4ed1-b9c6-fe62c69b1738" />
+<img width="394" height="202" alt="Captura de pantalla 2026-07-13 220338" src="https://github.com/user-attachments/assets/fda2d90c-3342-4b95-9e70-f7706e34d23a" />
 
 
 Antes de la cobertura del 70%
 
+<img width="396" height="200" alt="Captura de pantalla 2026-07-13 220301" src="https://github.com/user-attachments/assets/bb02d7a5-3219-499e-9ffa-9f137cda659e" />
 
 Despues de la cobertura del 70%
 
+<img width="394" height="202" alt="Captura de pantalla 2026-07-13 220338" src="https://github.com/user-attachments/assets/9a75ad08-43ff-40b5-91ee-7a5810c42be2" />
 
 Luego de implementar sonarcloud
 
+<img width="681" height="325" alt="Captura de pantalla 2026-07-13 221805" src="https://github.com/user-attachments/assets/80833ae8-c631-4421-885c-1c3746d654f2" />
+<img width="449" height="223" alt="Captura de pantalla 2026-07-13 222041" src="https://github.com/user-attachments/assets/20f8d403-0705-471a-b3ad-76b8f31cf78e" />
 
 Evidencia en GitGub del comportamiento de todos los flujos de trabajo
+![Uploading Captura de pantalla 2026-07-13 221805.png…]()
+
