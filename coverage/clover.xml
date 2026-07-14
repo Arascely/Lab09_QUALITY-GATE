@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1783992093255" clover="3.2.0">
-  <project timestamp="1783992093256" name="All files">
+<coverage generated="1783993323086" clover="3.2.0">
+  <project timestamp="1783993323088" name="All files">
     <metrics statements="24" coveredstatements="19" conditionals="25" coveredconditionals="18" methods="9" coveredmethods="8" elements="58" coveredelements="45" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
     <file name="buscador.js" path="D:\Pruebas\Lab08\Lab09\src\buscador.js">
       <metrics statements="14" coveredstatements="12" conditionals="14" coveredconditionals="10" methods="7" coveredmethods="7"/>
